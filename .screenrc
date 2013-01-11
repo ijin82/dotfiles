@@ -1,4 +1,6 @@
 startup_message off
 caption always
-caption string "%{kw}%-w%{wr}%n %t%{-}%+w"
+caption string "%{kw}%-w%{wr}%n %t%{-}%+w %=%d.%m.%Y %c "
+defutf8 on
+defscrollback 5000
 
