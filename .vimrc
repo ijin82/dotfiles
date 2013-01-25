@@ -1,5 +1,4 @@
 
-
 " highlight on
 syntax on
 
@@ -32,7 +31,7 @@ set expandtab
 map <C-t> :tabnew<CR>
 map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
-map <C-w> :tabc<CR>
+map <C-k> :tabc<CR>
 
 
 
