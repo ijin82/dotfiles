@@ -1,7 +1,5 @@
-
 " highlight on
 syntax on
-
 
 set wildmode=list:longest,full
 
@@ -33,6 +31,10 @@ map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
 map <C-k> :tabc<CR>
 
+
+
+" switch line numbers on/off
+map <F2> :set number!<CR>
 
 
 
