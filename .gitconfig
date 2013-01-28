@@ -1,0 +1,7 @@
+[color]
+	ui = true
+[alias]
+	ll = log -20 --pretty='%Cred%h %Cblue%an %ar %Cgreen%s'
+[user]
+	email = ilya.rogojin@gmail.com
+	name = ijin
