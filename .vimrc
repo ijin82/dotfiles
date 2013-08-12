@@ -1,3 +1,7 @@
+" have to be installed pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
 " highlight on
 syntax on
 
@@ -15,6 +19,10 @@ set ruler
 " textwrap
 set nowrap
 
+" max line length marker
+set colorcolumn=120
+
+
 " disable beeping
 set noeb vb t_vb=
 
@@ -23,18 +31,30 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-
-
 " tabs navigation
 map <C-t> :tabnew<CR>
 map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
-map <C-k> :tabc<CR>
-
-
 
 " switch line numbers on/off
 map <F2> :set number!<CR>
+" Toggle NERDtree
+map <F3> :NERDTreeToggle<CR>
 
+" Set font for macvim
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Consolas\ 13
+  else
+    set guifont=Consolas:h15
+  endif
+endif
 
+" Set colorscheme
+set background=dark
+colorscheme default
 
+" jump to previous position in file on reopen
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
