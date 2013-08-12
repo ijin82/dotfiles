@@ -57,6 +57,14 @@ else
   set background=dark
 endif
 colorscheme solarized
+map <F5> :call ToggleBg()<CR>
+function! ToggleBg()
+    if &background == 'dark'
+        set bg=light
+    else
+        set bg=dark
+    endif
+endfunc
 
 " jump to previous position in file on reopen
 if has("autocmd")
