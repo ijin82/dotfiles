@@ -46,13 +46,17 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=Consolas\ 13
   else
-    set guifont=Consolas:h15
+    set guifont=Consolas:h16
   endif
 endif
 
 " Set colorscheme
-set background=dark
-colorscheme default
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
 
 " jump to previous position in file on reopen
 if has("autocmd")
