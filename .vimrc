@@ -30,6 +30,8 @@ set noeb vb t_vb=
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set smarttab
+set smartindent
 
 " tabs navigation
 map <C-t> :tabnew<CR>
@@ -37,9 +39,11 @@ map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
 
 " switch line numbers on/off
-map <F2> :set number!<CR>
+map <F4> :set number!<CR>
 " Toggle NERDtree
-map <F3> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
+" view current founded item in Ack results
+nmap <F3> :Ack -i<space>
 
 " Set font for macvim
 if has("gui_running")
