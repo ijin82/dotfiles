@@ -8,6 +8,11 @@ syntax on
 " vim not vi
 set nocompatible
 
+" loading the plugin files for specific file types
+filetype plugin on
+" indent for special file types
+filetype indent on
+
 " autocomplete settings
 set wildmode=list:longest,full
 
