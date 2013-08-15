@@ -5,12 +5,20 @@ call pathogen#helptags()
 " highlight on
 syntax on
 
+" vim not vi
+set nocompatible
+
+" autocomplete settings
 set wildmode=list:longest,full
 
 " backup and swap
 set noswapfile
 set nobackup
 set nowritebackup
+
+set guioptions+=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
 
 " line nubers + rulers
 set number
@@ -32,6 +40,7 @@ set shiftwidth=2
 set expandtab
 set smarttab
 set smartindent
+set hlsearch
 
 " tabs navigation
 map <C-t> :tabnew<CR>
@@ -42,6 +51,9 @@ map <C-p> :tabp<CR>
 map <F4> :set number!<CR>
 " Toggle NERDtree
 map <F2> :NERDTreeToggle<CR>
+" find forler for current file in NERDTree
+map ff :NERDTreeFind<CR>
+
 " view current founded item in Ack results
 nmap <F3> :Ack -i<space>
 
