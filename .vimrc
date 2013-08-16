@@ -13,6 +13,9 @@ filetype plugin on
 " indent for special file types
 filetype indent on
 
+" for airline statusbar
+set laststatus=2
+
 " autocomplete settings
 set wildmode=list:longest,full
 
