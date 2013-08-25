@@ -24,7 +24,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-set guioptions+=m  "remove menu bar
+set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
@@ -55,15 +55,18 @@ map <C-t> :tabnew<CR>
 map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
 
-" switch line numbers on/off
-map <F4> :set number!<CR>
 " Toggle NERDtree
 map <F2> :NERDTreeToggle<CR>
+" view current founded item in Ack results
+nmap <F3> :Ack -i<space>
+" switch line numbers on/off
+map <F4> :set number!<CR>
+" switch hlsearch
+map <F6> :set hlsearch!<CR>
+
 " find forler for current file in NERDTree
 map ff :NERDTreeFind<CR>
 
-" view current founded item in Ack results
-nmap <F3> :Ack -i<space>
 
 " Set font for macvim
 if has("gui_running")
@@ -77,10 +80,11 @@ endif
 " Set colorscheme
 if has('gui_running')
   set background=light
+  colorscheme solarized
 else
   set background=dark
 endif
-colorscheme solarized
+" Toggle background
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
     if &background == 'dark'
@@ -99,4 +103,19 @@ endif
 autocmd FileType python set ft=python.django
 " For SnipMate
 autocmd FileType html set ft=htmldjango.html
+
+" fullscreen on open
+if has('gui_running')
+  set lines=999
+  set columns=999
+endif
+
+
+" normal mode: shift + arrow  = visual mode
+if has('gui_running')
+  nmap <S-Right> v
+  nmap <S-Left> v
+  nmap <S-Down> V
+  nmap <S-Up> V
+endif
 
