@@ -119,3 +119,6 @@ if has('gui_running')
   nmap <S-Up> V
 endif
 
+nmap <D-F2> :marks<CR>
+
+
