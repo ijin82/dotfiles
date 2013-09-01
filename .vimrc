@@ -10,6 +10,7 @@ set nocompatible
 
 " loading the plugin files for specific file types
 filetype plugin on
+
 " indent for special file types
 filetype indent on
 
@@ -28,7 +29,7 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
-" line nubers + rulers
+" line nubers + ruler
 set number
 set ruler
 
@@ -37,7 +38,6 @@ set nowrap
 
 " max line length marker
 set colorcolumn=120
-
 
 " disable beeping
 set noeb vb t_vb=
@@ -57,10 +57,13 @@ map <C-p> :tabp<CR>
 
 " Toggle NERDtree
 map <F2> :NERDTreeToggle<CR>
+
 " view current founded item in Ack results
-nmap <F3> :Ack -i<space>
+map <F3> :Ack -i<space>
+
 " switch line numbers on/off
 map <F4> :set number!<CR>
+
 " switch hlsearch
 map <F6> :set hlsearch!<CR>
 
@@ -84,6 +87,7 @@ if has('gui_running')
 else
   set background=dark
 endif
+
 " Toggle background
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
@@ -101,24 +105,40 @@ endif
 
 " For SnipMate
 autocmd FileType python set ft=python.django
+
 " For SnipMate
 autocmd FileType html set ft=htmldjango.html
 
-" fullscreen on open
+" fullscreen *hack* on open
 if has('gui_running')
   set lines=999
   set columns=999
 endif
 
 
-" normal mode: shift + arrow  = visual mode
+" select text: shift + arrow = visual mode
 if has('gui_running')
-  nmap <S-Right> v
-  nmap <S-Left> v
-  nmap <S-Down> V
-  nmap <S-Up> V
+  nmap <S-Right> v<Right>
+  nmap <S-Left> v<Left>
+  nmap <S-Down> V<Down>
+  nmap <S-Up> V<Up>
+  
+  " remove long jumps with shift in visual mode  
+  vmap <S-Right> <Right>
+  vmap <S-Left> <Left>
+  vmap <S-Down> <Down>
+  vmap <S-Up> <Up>
+
+  " select line to end 
+  nmap <S-End> v$
+  " select line to begin
+  nmap <S-Home> v0
 endif
 
-nmap <D-F2> :marks<CR>
-
+" List bookmarks: Win-F2 for Linux, Cmd-F2 fir MacOS
+if has("gui_gtk2")
+  nmap <T-F2> :marks<CR>
+else
+  nmap <D-F2> :marks<CR>
+endif
 
