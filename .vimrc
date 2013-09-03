@@ -142,3 +142,8 @@ else
   nmap <D-F2> :marks<CR>
 endif
 
+" Custom commands here
+" ####################
+" format ugly json
+command FormatJson execute "%!python -m json.tool"
+
