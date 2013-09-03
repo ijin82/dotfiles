@@ -68,6 +68,10 @@ map <F4> :set number!<CR>
 " switch hlsearch
 map <F6> :set hlsearch!<CR>
 
+" call ctrlp plugin
+map <F7> :CtrlP<CR>
+map <S-F7> :CtrlPBuffer<CR>
+
 " find forler for current file in NERDTree
 map ff :NERDTreeFind<CR>
 
