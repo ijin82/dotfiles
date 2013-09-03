@@ -40,7 +40,8 @@ set nowrap
 set colorcolumn=120
 
 " disable beeping
-set noeb vb t_vb=
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " tabs to spaces
 set tabstop=2
