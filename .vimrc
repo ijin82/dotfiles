@@ -59,6 +59,9 @@ map <C-p> :tabp<CR>
 " Toggle NERDtree
 map <F2> :NERDTreeToggle<CR>
 
+" find forler for current file in NERDTree
+map ff :NERDTreeFind<CR>
+
 " view current founded item in Ack results
 map <F3> :Ack -i<space>
 
@@ -66,15 +69,23 @@ map <F3> :Ack -i<space>
 map <F4> :set number!<CR>
 
 " switch hlsearch
-map <F6> :set hlsearch!<CR>
+map <F6> :let @/ = ""<CR>
 
 " call ctrlp plugin
 map <F7> :CtrlP<CR>
 map <S-F7> :CtrlPBuffer<CR>
-
-" find forler for current file in NERDTree
-map ff :NERDTreeFind<CR>
-
+" ctrlP optional files ignore
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+" remove vcs's folders
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+" for node.js projects
+let g:ctrlp_custom_ignore = '\v[\/]node_modules$'
 
 " Set font for macvim
 if has("gui_running")
@@ -120,7 +131,6 @@ if has('gui_running')
   set columns=999
 endif
 
-
 " select text: shift + arrow = visual mode
 if has('gui_running')
   nmap <S-Right> v<Right>
@@ -151,4 +161,7 @@ endif
 " ####################
 " format ugly json
 command FormatJson execute "%!python -m json.tool"
+
+" recent files list
+map <M-F2> :browse oldfiles<CR>
 
