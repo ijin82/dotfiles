@@ -19,6 +19,7 @@ set laststatus=2
 
 " autocomplete settings
 set wildmode=list:longest,full
+set wildmenu
 
 " backup and swap
 set noswapfile
@@ -68,8 +69,14 @@ map <F3> :Ack -i<space>
 " switch line numbers on/off
 map <F4> :set number!<CR>
 
-" switch hlsearch
+" remove last search
 map <F6> :let @/ = ""<CR>
+
+" search as you type.
+set incsearch
+
+" ignore case when searching.
+set ignorecase
 
 " call ctrlp plugin
 map <F7> :CtrlP<CR>
@@ -138,7 +145,7 @@ if has('gui_running')
   nmap <S-Down> V<Down>
   nmap <S-Up> V<Up>
   
-  " remove long jumps with shift in visual mode  
+  " remove long jumps with shift in visual mode
   vmap <S-Right> <Right>
   vmap <S-Left> <Left>
   vmap <S-Down> <Down>
@@ -168,3 +175,4 @@ map <M-F2> :browse oldfiles<CR>
 " smart Home key
 noremap <expr> <silent> <Home> col('.') == match(getline('.'),'\S')+1 ? '0' : '^'
 imap <silent> <Home> <C-O><Home>
+
