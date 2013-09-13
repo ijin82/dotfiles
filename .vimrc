@@ -81,18 +81,18 @@ set ignorecase
 " call ctrlp plugin
 map <F7> :CtrlP<CR>
 map <S-F7> :CtrlPBuffer<CR>
+
 " ctrlP optional files ignore
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
 " remove vcs's folders
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
+  \ 'node': '\v[\/]\.(git|hg|svn)$',
   \ }
-" for node.js projects
-let g:ctrlp_custom_ignore = '\v[\/]node_modules$'
 
 " Set font for macvim
 if has("gui_running")
@@ -142,8 +142,8 @@ endif
 if has('gui_running')
   nmap <S-Right> v<Right>
   nmap <S-Left> v<Left>
-  nmap <S-Down> V<Down>
-  nmap <S-Up> V<Up>
+  nmap <S-Down> V
+  nmap <S-Up> V
   
   " remove long jumps with shift in visual mode
   vmap <S-Right> <Right>
@@ -155,13 +155,23 @@ if has('gui_running')
   nmap <S-End> v$
   " select line to begin
   nmap <S-Home> v0
-endif
+
+  " selection in insert mode
+  imap <S-Down> <Esc>V
+  imap <S-Up> <Esc>V
+  imap <S-Left> <Esc><Left>v<Left>
+  imap <S-Right> <Esc><Right>v<Right>
+  imap <S-End> <Esc><Right>v$
+  imap <S-Home> <Esc><Left>v0
+end
 
 " List bookmarks: Win-F2 for Linux, Cmd-F2 fir MacOS
 if has("gui_gtk2")
   nmap <T-F2> :marks<CR>
+  nmap <T-F3> :browse oldfiles<CR>
 else
   nmap <D-F2> :marks<CR>
+  nmap <D-F3> :browse oldfiles<CR>
 endif
 
 " Custom commands here
@@ -170,7 +180,7 @@ endif
 command FormatJson execute "%!python -m json.tool"
 
 " recent files list
-map <M-F2> :browse oldfiles<CR>
+"map <M-F2> :browse oldfiles<CR>
 
 " smart Home key
 noremap <expr> <silent> <Home> col('.') == match(getline('.'),'\S')+1 ? '0' : '^'
