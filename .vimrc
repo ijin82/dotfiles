@@ -89,9 +89,10 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 " remove vcs's folders
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'file': '\v\.(exe|so|dll|jpg|jpeg|gif|swf)$',
   \ 'link': 'some_bad_symbolic_links',
   \ 'node': '\v[\/]\.(git|hg|svn)$',
+  \ 'images': '\v[\/](images|img)$',
   \ }
 
 " Set font for macvim
@@ -168,19 +169,20 @@ end
 " List bookmarks: Win-F2 for Linux, Cmd-F2 fir MacOS
 if has("gui_gtk2")
   nmap <T-F2> :marks<CR>
-  nmap <T-F3> :browse oldfiles<CR>
 else
   nmap <D-F2> :marks<CR>
-  nmap <D-F3> :browse oldfiles<CR>
 endif
+
+" recent files list
+map <M-F3> :browse oldfiles<CR>
 
 " Custom commands here
 " ####################
 " format ugly json
 command FormatJson execute "%!python -m json.tool"
+" Format ugly xml
+command FormatXml execute "%!xmllint --format --recover - "
 
-" recent files list
-"map <M-F2> :browse oldfiles<CR>
 
 " smart Home key
 noremap <expr> <silent> <Home> col('.') == match(getline('.'),'\S')+1 ? '0' : '^'
