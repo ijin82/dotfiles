@@ -179,12 +179,16 @@ map <M-F3> :browse oldfiles<CR>
 " Custom commands here
 " ####################
 " format ugly json
-command FormatJson execute "%!python -m json.tool"
+command! FmtJson execute "%!python -m json.tool"
 " Format ugly xml
-command FormatXml execute "%!xmllint --format --recover - "
-
+command! FmtXml execute "%!xmllint --format --recover - "
 
 " smart Home key
 noremap <expr> <silent> <Home> col('.') == match(getline('.'),'\S')+1 ? '0' : '^'
 imap <silent> <Home> <C-O><Home>
+
+" edit ~/.vimrc file on :rcedit
+command! RcEdit e $MYVIMRC
+" reload ~/.vimrc config
+command! RcReload source $MYVIMRC
 
