@@ -25,6 +25,7 @@
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+
 [submodule ".vim/bundle/ir_black"]
 	path = .vim/bundle/ir_black
-	url = git://github.com/twerth/ir_black
+	url = git://github.com/twerth/ir_black.git
