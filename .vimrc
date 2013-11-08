@@ -110,6 +110,7 @@ if has('gui_running')
   colorscheme solarized
 else
   set background=dark
+  colorscheme default
 endif
 
 " Toggle background
