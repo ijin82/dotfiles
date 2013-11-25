@@ -1,5 +1,6 @@
 " have to be installed pathogen
 call pathogen#infect()
+call pathogen#incubate()
 call pathogen#helptags()
 
 " highlight on
@@ -192,4 +193,8 @@ imap <silent> <Home> <C-O><Home>
 command! RcEdit e $MYVIMRC
 " reload ~/.vimrc config
 command! RcReload source $MYVIMRC
+
+" fix PageUp & PageDown
+map <PageDown> <Home><C-d>
+map <PageUp> <Home><C-u>
 
