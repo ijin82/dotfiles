@@ -100,6 +100,7 @@ let g:ctrlp_custom_ignore = {
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Consolas\ 13
+"    set guifont
   else
     set guifont=Consolas:h16
   endif
