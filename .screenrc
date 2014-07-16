@@ -3,4 +3,4 @@ caption always
 caption string "%{kw}%-w%{wr}%n %t%{-}%+w"
 defutf8 on
 defscrollback 5000
-
+shell "/usr/local/bin/zsh"

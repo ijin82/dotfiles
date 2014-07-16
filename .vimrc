@@ -199,3 +199,6 @@ command! RcReload source $MYVIMRC
 map <PageDown> <Home><C-d>
 map <PageUp> <Home><C-u>
 
+" backspace
+set backspace=indent,eol,start
+
