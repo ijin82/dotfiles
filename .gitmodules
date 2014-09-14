@@ -16,13 +16,13 @@
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+  ignore = dirty
 [submodule ".vim/bundle/twig"]
 	path = .vim/bundle/twig
 	url = https://github.com/evidens/vim-twig.git
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-
 [submodule ".vim/bundle/blade"]
 	path = .vim/bundle/blade
 	url = https://github.com/xsbeats/vim-blade.git
