@@ -1,28 +1,29 @@
 [submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+  path = .vim/bundle/nerdtree
+  url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/emmet"]
-	path = .vim/bundle/emmet
-	url = http://github.com/mattn/emmet-vim.git
+  path = .vim/bundle/emmet
+  url = http://github.com/mattn/emmet-vim.git
 [submodule ".vim/bundle/solarized"]
-	path = .vim/bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
+  path = .vim/bundle/solarized
+  url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/jade"]
-	path = .vim/bundle/jade
-	url = https://github.com/digitaltoad/vim-jade.git
+  path = .vim/bundle/jade
+  url = https://github.com/digitaltoad/vim-jade.git
 [submodule ".vim/bundle/airline"]
-	path = .vim/bundle/airline
-	url = https://github.com/bling/vim-airline
+  path = .vim/bundle/airline
+  url = https://github.com/bling/vim-airline
 [submodule ".vim/bundle/snipmate"]
-	path = .vim/bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
+  path = .vim/bundle/snipmate
+  url = https://github.com/msanders/snipmate.vim.git
   ignore = dirty
 [submodule ".vim/bundle/twig"]
-	path = .vim/bundle/twig
-	url = https://github.com/evidens/vim-twig.git
+  path = .vim/bundle/twig
+  url = https://github.com/evidens/vim-twig.git
 [submodule ".vim/bundle/ctrlp"]
-	path = .vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
+  path = .vim/bundle/ctrlp
+  url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/blade"]
-	path = .vim/bundle/blade
-	url = https://github.com/xsbeats/vim-blade.git
+  path = .vim/bundle/blade
+  url = https://github.com/xsbeats/vim-blade.git
+
