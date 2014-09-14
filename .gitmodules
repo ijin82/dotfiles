@@ -23,3 +23,6 @@
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 
+[submodule ".vim/bundle/blade"]
+	path = .vim/bundle/blade
+	url = https://github.com/xsbeats/vim-blade.git
