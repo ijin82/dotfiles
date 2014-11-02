@@ -2,8 +2,9 @@
 	ui = true
 [user]
 	email = ilya.rogojin@gmail.com
-	name = ijin82
-[alias]                                                                                                                    
-  cf = show --pretty="format:" --name-only                                                                                 
+	name = Ilya Rogojin
+[alias]
+  cf = show --pretty="format:" --name-only
+  st = status
   ll = log -25 --format=format:'%C(yellow)%h%C(reset) %C(red)- %an%C(reset) - %C(white)%s%C(reset) %C(bold yellow)%d%C(reset) %C(green)(%ar)%C(reset)' --abbrev-commit --date=short
 
