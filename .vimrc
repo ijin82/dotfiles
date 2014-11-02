@@ -111,8 +111,8 @@ if has('gui_running')
   set background=light
   colorscheme solarized
 else
-  set background=dark
-  colorscheme default
+  set background=light
+  colorscheme monokai
 endif
 
 " Toggle background
