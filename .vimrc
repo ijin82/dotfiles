@@ -64,9 +64,6 @@ map <F2> :NERDTreeToggle<CR>
 " find forler for current file in NERDTree
 map ff :NERDTreeFind<CR>
 
-" view current founded item in Ack results
-map <F3> :Ack -i<space>
-
 " switch line numbers on/off
 map <F4> :set number!<CR>
 
@@ -79,62 +76,37 @@ set incsearch
 " ignore case when searching.
 set ignorecase
 
-" call ctrlp plugin
-map <F7> :CtrlP<CR>
-map <S-F7> :CtrlPBuffer<CR>
-
-" ctrlP optional files ignore
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
-" remove vcs's folders
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|jpg|jpeg|gif|swf)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ 'node': '\v[\/]\.(git|hg|svn)$',
-  \ 'images': '\v[\/](images|img)$',
-  \ }
-
 " Set font for macvim
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Consolas\ 13
-"    set guifont
   else
     set guifont=Consolas:h16
   endif
 endif
 
 " Set colorscheme
+set background=light
 if has('gui_running')
-  set background=light
   colorscheme solarized
 else
-  set background=light
   colorscheme monokai
 endif
 
 " Toggle background
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
-    if &background == 'dark'
-        set bg=light
-    else
-        set bg=dark
-    endif
+  if &background == 'dark'
+    set bg=light
+  else
+    set bg=dark
+  endif
 endfunc
 
 " jump to previous position in file on reopen
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-" For SnipMate
-autocmd FileType python set ft=python.django
-
-" For SnipMate
-autocmd FileType html set ft=htmldjango.html
 
 " fullscreen *hack* on open
 if has('gui_running')
@@ -169,15 +141,8 @@ if has('gui_running')
   imap <S-Home> <Esc><Left>v0
 end
 
-" List bookmarks: Win-F2 for Linux, Cmd-F2 fir MacOS
-if has("gui_gtk2")
-  nmap <T-F2> :marks<CR>
-else
-  nmap <D-F2> :marks<CR>
-endif
-
 " recent files list
-map <M-F3> :browse oldfiles<CR>
+nmap <F3> :browse oldfiles<CR>
 
 " Custom commands here
 " ####################
