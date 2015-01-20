@@ -1,6 +1,5 @@
 " have to be installed pathogen
-call pathogen#infect()
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
 " highlight on
@@ -109,10 +108,10 @@ if has("autocmd")
 endif
 
 " fullscreen *hack* on open
-if has('gui_running')
-  set lines=999
-  set columns=999
-endif
+"if has('gui_running')
+"  set lines=999
+"  set columns=999
+"endif
 
 " select text: shift + arrow = visual mode
 if has('gui_running')
