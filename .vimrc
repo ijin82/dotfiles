@@ -63,6 +63,10 @@ map <F2> :NERDTreeToggle<CR>
 " find forler for current file in NERDTree
 map ff :NERDTreeFind<CR>
 
+" insert current date 
+nnoremap <F9> "=strftime("%d %b %Y")<CR>P
+inoremap <F9> <C-R>=strftime("%d %b %Y")<CR>
+
 " switch line numbers on/off
 map <F4> :set number!<CR>
 
