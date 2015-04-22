@@ -83,9 +83,12 @@ set ignorecase
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Consolas\ 13
+    set columns=158
+    set lines=46
   else
     set guifont=Consolas:h16
   endif
+  map <C-Tab> :tabn<CR>
 endif
 
 " Set colorscheme
