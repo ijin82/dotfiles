@@ -23,10 +23,7 @@
 [submodule ".vim/bundle/blade"]
   path = .vim/bundle/blade
   url = https://github.com/xsbeats/vim-blade.git
-
 [submodule ".vim/bundle/monokai"]
 	path = .vim/bundle/monokai
 	url = https://github.com/sickill/vim-monokai.git
-[submodule ".vim/bundle/simple-todo"]
-	path = .vim/bundle/simple-todo
-	url = https://github.com/vitalk/vim-simple-todo
+

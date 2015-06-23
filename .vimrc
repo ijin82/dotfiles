@@ -26,9 +26,9 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=m  " remove menu bar
+set guioptions-=T  " remove toolbar
+set guioptions-=r  " remove right-hand scroll bar
 
 " line nubers + ruler
 set number
@@ -172,4 +172,7 @@ map <PageUp> <Home><C-u>
 
 " backspace
 set backspace=indent,eol,start
+
+" new mapleader
+let mapleader=","
 
