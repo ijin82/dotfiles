@@ -154,7 +154,7 @@ nmap <F3> :browse oldfiles<CR>
 " ####################
 " format ugly json
 command! FmtJson execute "%!python -m json.tool"
-" Format ugly xml
+" Format ugly xml || sudo apt-get install libxml2-utils
 command! FmtXml execute "%!xmllint --format --recover - "
 
 " smart Home key

@@ -27,3 +27,6 @@
 [submodule ".vim/bundle/monokai"]
 	path = .vim/bundle/monokai
 	url = https://github.com/sickill/vim-monokai.git
+[submodule ".vim/bundle/simple-todo"]
+	path = .vim/bundle/simple-todo
+	url = https://github.com/vitalk/vim-simple-todo
