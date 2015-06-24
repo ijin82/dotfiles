@@ -53,9 +53,9 @@ set smartindent
 set hlsearch
 
 " tabs navigation
-map <C-t> :tabnew<CR>
-map <C-n> :tabn<CR>
-map <C-p> :tabp<CR>
+map <C-t>t :tabnew<CR>
+map <C-t>n :tabn<CR>
+map <C-t>p :tabp<CR>
 
 " Toggle NERDtree
 map <F2> :NERDTreeToggle<CR>
@@ -71,7 +71,7 @@ inoremap <F9> <C-R>=strftime("%d %b %Y")<CR>
 map <F4> :set number!<CR>
 
 " remove last search
-map <F6> :let @/ = ""<CR>
+map <F10> :let @/ = ""<CR>
 
 " search as you type.
 set incsearch
@@ -113,12 +113,6 @@ endfunc
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-" fullscreen *hack* on open
-"if has('gui_running')
-"  set lines=999
-"  set columns=999
-"endif
 
 " select text: shift + arrow = visual mode
 if has('gui_running')
