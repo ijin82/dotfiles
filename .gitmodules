@@ -26,3 +26,6 @@
 [submodule ".vim/bundle/monokai"]
 	path = .vim/bundle/monokai
 	url = https://github.com/sickill/vim-monokai.git
+[submodule ".vim/bundle/plaintasks"]
+	path = .vim/bundle/plaintasks
+	url = https://github.com/ijin82/plaintasks.vim.git
