@@ -170,3 +170,11 @@ set backspace=indent,eol,start
 " new mapleader
 let mapleader=","
 
+" markdown plugin
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" markdown instant editor plugin
+let g:instant_markdown_slow = 1
+" to start preview run :InstantMarkdownPreview
+let g:instant_markdown_autostart = 0
+
