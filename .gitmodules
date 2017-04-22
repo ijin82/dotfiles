@@ -1,12 +1,6 @@
 [submodule ".vim/bundle/nerdtree"]
   path = .vim/bundle/nerdtree
   url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/emmet"]
-  path = .vim/bundle/emmet
-  url = http://github.com/mattn/emmet-vim.git
-[submodule ".vim/bundle/jade"]
-  path = .vim/bundle/jade
-  url = https://github.com/digitaltoad/vim-jade.git
 [submodule ".vim/bundle/airline"]
   path = .vim/bundle/airline
   url = https://github.com/bling/vim-airline
