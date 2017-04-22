@@ -1,6 +1,12 @@
 " have to be installed pathogen
-call pathogen#infect('bundle/{}')
-call pathogen#helptags()
+"call pathogen#infect('bundle/{}')
+"call pathogen#helptags()
+
+" support RU
+if has('gui_running')
+  lan mes ru_RU.UTF-8
+  set encoding=utf-8
+endif
 
 " highlight on
 syntax on
@@ -15,11 +21,11 @@ filetype plugin on
 filetype indent on
 
 " for airline statusbar
-set laststatus=2
+"set laststatus=2
 
 " autocomplete settings
-set wildmode=list:longest,full
-set wildmenu
+"set wildmode=list:longest,full
+"set wildmenu
 
 " backup and swap
 set noswapfile
@@ -30,7 +36,7 @@ set guioptions-=m  " remove menu bar
 set guioptions-=T  " remove toolbar
 set guioptions-=r  " remove right-hand scroll bar
 
-" line nubers + ruler
+" line numbers + ruler
 set number
 set ruler
 
@@ -58,10 +64,10 @@ map <C-t>n :tabn<CR>
 map <C-t>p :tabp<CR>
 
 " Toggle NERDtree
-map <F2> :NERDTreeToggle<CR>
+"map <F2> :NERDTreeToggle<CR>
 
 " find forler for current file in NERDTree
-map ff :NERDTreeFind<CR>
+"map ff :NERDTreeFind<CR>
 
 " insert current date 
 nnoremap <F9> "=strftime("%d %b %Y")<CR>P
@@ -94,7 +100,7 @@ endif
 " Set colorscheme
 set background=light
 if has('gui_running')
-  colorscheme solarized
+  "colorscheme solarized
 else
   colorscheme monokai
 endif
@@ -147,9 +153,9 @@ nmap <F3> :browse oldfiles<CR>
 " Custom commands here
 " ####################
 " format ugly json
-command! FmtJson execute "%!python -m json.tool"
+"command! FmtJson execute "%!python -m json.tool"
 " Format ugly xml || sudo apt-get install libxml2-utils
-command! FmtXml execute "%!xmllint --format --recover - "
+"command! FmtXml execute "%!xmllint --format --recover - "
 
 " smart Home key
 noremap <expr> <silent> <Home> col('.') == match(getline('.'),'\S')+1 ? '0' : '^'
@@ -169,4 +175,3 @@ set backspace=indent,eol,start
 
 " new mapleader
 let mapleader=","
-
