@@ -1,18 +1,28 @@
-" have to be installed pathogen
-"call pathogen#infect('bundle/{}')
-"call pathogen#helptags()
+set nocompatible              " be iMproved, required by Vundle
+filetype off                  " required by Vundle
 
-" support RU
-if has('gui_running')
-  lan mes ru_RU.UTF-8
-  set encoding=utf-8
-endif
+set encoding=utf-8
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'sickill/vim-monokai'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+" snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+call vundle#end()            " required by Vundle
+filetype plugin indent on    " required by Vundle
+" to Install new plugin run :PluginInstall
+
+
+" My own settings here
+
 
 " highlight on
 syntax on
-
-" vim not vi
-set nocompatible
 
 " loading the plugin files for specific file types
 filetype plugin on
@@ -21,11 +31,11 @@ filetype plugin on
 filetype indent on
 
 " for airline statusbar
-"set laststatus=2
+set laststatus=2
 
 " autocomplete settings
-"set wildmode=list:longest,full
-"set wildmenu
+set wildmode=list:longest,full
+set wildmenu
 
 " backup and swap
 set noswapfile
@@ -64,10 +74,9 @@ map <C-t>n :tabn<CR>
 map <C-t>p :tabp<CR>
 
 " Toggle NERDtree
-"map <F2> :NERDTreeToggle<CR>
-
+map <F2> :NERDTreeToggle<CR>
 " find forler for current file in NERDTree
-"map ff :NERDTreeFind<CR>
+map ff :NERDTreeFind<CR>
 
 " insert current date 
 nnoremap <F9> "=strftime("%d %b %Y")<CR>P
@@ -98,11 +107,12 @@ if has("gui_running")
 endif
 
 " Set colorscheme
-set background=light
 if has('gui_running')
-  "colorscheme solarized
+  colorscheme default
+  set background=light
 else
   colorscheme monokai
+  set background=light
 endif
 
 " Toggle background
