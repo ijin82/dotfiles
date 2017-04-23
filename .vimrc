@@ -9,10 +9,6 @@ call vundle#begin()
 Plugin 'sickill/vim-monokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
-" snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
 call vundle#end()            " required by Vundle
 filetype plugin indent on    " required by Vundle
 " to Install new plugin run :PluginInstall
