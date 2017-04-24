@@ -104,7 +104,8 @@ endif
 
 " Set colorscheme
 if has('gui_running')
-  colorscheme default
+  "colorscheme default
+  colorscheme monokai
   set background=light
 else
   colorscheme monokai
