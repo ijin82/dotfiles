@@ -93,9 +93,9 @@ set ignorecase
 " Set font for macvim
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Consolas\ 13
-    set columns=158
-    set lines=46
+    set guifont=Consolas\ 16
+    set columns=120
+    set lines=40
   else
     set guifont=Consolas:h16
   endif
@@ -106,10 +106,10 @@ endif
 if has('gui_running')
   "colorscheme default
   colorscheme monokai
-  set background=light
+  set background=dark
 else
   colorscheme monokai
-  set background=light
+  set background=dark
 endif
 
 " Toggle background
@@ -160,9 +160,9 @@ nmap <F3> :browse oldfiles<CR>
 " Custom commands here
 " ####################
 " format ugly json
-"command! FmtJson execute "%!python -m json.tool"
+command! FmtJson execute "%!python -m json.tool"
 " Format ugly xml || sudo apt-get install libxml2-utils
-"command! FmtXml execute "%!xmllint --format --recover - "
+command! FmtXml execute "%!xmllint --format --recover - "
 
 " smart Home key
 noremap <expr> <silent> <Home> col('.') == match(getline('.'),'\S')+1 ? '0' : '^'
