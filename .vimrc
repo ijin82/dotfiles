@@ -8,6 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'sickill/vim-monokai'
 Plugin 'scrooloose/nerdtree'
+Plugin 'chr4/nginx.vim'
 Plugin 'vim-airline/vim-airline'
 call vundle#end()            " required by Vundle
 filetype plugin indent on    " required by Vundle
