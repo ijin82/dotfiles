@@ -1,12 +1,13 @@
 [color]
-	ui = true
+  ui = true
 [user]
-	email = ilya.rogojin@gmail.com
-	name = Ilya Rogojin
+  email = ilya.rogojin@gmail.com
+  name = Ilya Rogojin
 [alias]
-  show-files = show --pretty="format:" --name-only
+  show-files = show --pretty=format: --name-only
   st = status
   ll = log -25 --format=format:'%C(yellow)%h%C(reset) %C(red)- %an%C(reset) - %C(white)%s%C(reset) %C(bold yellow)%d%C(reset) %C(green)(%ar)%C(reset)' --abbrev-commit --date=short
 [merge]
   tool = meld
-
+[core]
+  autocrlf = input
