@@ -93,8 +93,8 @@ set ignorecase
 
 " Set font for macvim
 if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Consolas\ 16
+  if has("gui_gtk3")
+    set guifont=Consolas\ 18
     set columns=120
     set lines=40
   else
